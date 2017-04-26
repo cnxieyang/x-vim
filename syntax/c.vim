@@ -1,7 +1,6 @@
 "====================================================
 " Highlight All Function
-" 高亮函数名称，加粗，颜色使用的是x028_Green4 cterfg为28
-" 颜色和数值的对应关系见：http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
+" http://vim.wikia.com/wiki/Xterm256_color_names_for_console_Vim
 " ===================================================
 syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>[^()]*)("me=e-2
 syn match cFunction "\<[a-zA-Z_][a-zA-Z_0-9]*\>\s*("me=e-1
@@ -14,7 +13,6 @@ hi cClassName cterm=bold ctermfg=28
 
 "====================================================
 " Highlight All Math Operator
-" 对C语言中关键字的另外的加亮
 " ===================================================
 syn match cMathOperator display "[-+\*\%=]"
 syn match cPointerOperator display "->\|\.\|\:\:"
@@ -31,12 +29,12 @@ syn match cLogicalOperatorError display "\(&&\|||\)="
 "syn match cPriorityOpreator display "(\|)\|\[\|\]\|{\|}"
 
 " match operator
-hi cMathOperator ctermfg=100            " 数学运算符使用了x100_Yellow4
-hi cPointerOperator ctermfg=153         " 指针运算符使用了x153_LightSkyBlue1
-hi cCompareOperator ctermfg=41          " 比较运算符使用x041_SpringGreen3
-hi cBinaryOperator ctermfg=6            " 二元运算符使用蓝色
+hi cMathOperator ctermfg=100
+hi cPointerOperator ctermfg=153
+hi cCompareOperator ctermfg=41
+hi cBinaryOperator ctermfg=6
 hi cBinaryOperatorError ctermfg=red
-hi cLogicalOperator ctermfg=203         " && ||使用x203_IndianRed1
+hi cLogicalOperator ctermfg=203
 hi cLogicalOperatorError ctermfg=yellow
-hi cPriorityOpreator ctermfg=6          " 括号由于有rainbow插件，没有高亮
-" vim: ts=8
+hi cPriorityOpreator ctermfg=6
+" vim: ts=4
